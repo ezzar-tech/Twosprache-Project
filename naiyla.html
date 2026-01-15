@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pribadi</title>
+    <style>
+        /* ====== Tampilan Umum ====== */
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #ffcced, #ff3366);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding-left: 50px;
+        }
+
+        /* ====== Kotak Utama ====== */
+        .card {
+            background-color: #ffffff;
+            border: 3px solid #333;
+            border-radius: 12px;
+            width: 850px;
+            padding: 20px 25px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ====== Header ====== */
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: #ffccfc;
+            border: 2px solid #000;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            width: 130px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #333;
+            margin-right: 25px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            font-size: 28px;
+            color: #003366;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        /* ====== Isi ====== */
+        .body {
+            display: flex;
+            background-color: #ccf8ff;
+            border: 2px solid #000;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 270px;
+            border-right: 2px dashed #666;
+            padding-right: 15px;
+        }
+
+        .sidebar p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .sidebar b {
+            color: #004080;
+        }
+
+        /* Konten Deskripsi */
+        .content {
+            flex: 1;
+            padding-left: 25px;
+        }
+
+        .content h2 {
+            margin-top: 0;
+            color: #004080;
+            border-bottom: 2px solid #004080;
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+
+        .content p {
+            text-align: justify;
+            line-height: 1.6;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Hover efek */
+        .card:hover {
+            transform: scale(1.01);
+            transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="header">
+            <img src="naiyla.jpg" alt="naiyla">
+            <h1>Naiyla Adinda Putri</h1>
+        </div>
+
+        <div class="body">
+            <div class="sidebar">
+                <p><b>Nama:</b> Naiyla Adinda Putri</p>
+<p><b>kelas:</b> XII-B</p><b>
+                <p>Tempat, Tgl Lahir:</b> Bekasi, 23 Februari 2008</p>
+                <p><b>Alamat:</b> Ds. Telajung</p>
+                <p><b>Hobi:</b> Menari</p>
+            </div>
+
+            <div class="content">
+                <h2>Deskripsi Diri</h2>
+                <p>
+                    Saya adalah seorang siswi SMA NEGERI 1 setu yang memiliki banyak kemauan
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
