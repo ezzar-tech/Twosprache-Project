@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Letter</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #cde7ff, #e6f3ff, #b3d9ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #003366;
+      overflow: hidden;
+    }
+
+    .letter {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 30px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 600px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      border: 1px solid rgba(0,0,0,0.05);
+      overflow-y: auto;
+      max-height: 90vh;
+      position: relative;
+      z-index: 2;
+      transform: scale(0.95);
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 26px;
+      color: #3399ff;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #66b3ff; }
+      to { text-shadow: 0 0 15px #3399ff; }
+    }
+
+    p { line-height: 1.7; font-size: 15px; margin-bottom: 16px; white-space: pre-line; }
+
+    .signature { text-align: right; margin-top: 25px; font-style: italic; color: #336699; }
+
+    .ps { margin-top: 15px; font-size: 14px; color: #4d94ff; }
+
+    .heart {
+      text-align: center;
+      font-size: 28px;
+      margin-top: 10px;
+      animation: pulse 1.5s infinite;
+      cursor: pointer;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+
+    .floating-heart {
+      position: absolute;
+      bottom: -20px;
+      color: #66b3ff;
+      animation: floatUp linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0); opacity: 0.7; }
+      to { transform: translateY(-110vh); opacity: 0; }
+    }
+
+    .start-btn, .music-btn {
+      position: absolute;
+      z-index: 3;
+      background: #3399ff;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .music-btn {
+      bottom: 20px;
+      right: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="start-btn" onclick="startExperience()">Tap to Open 💙</button>
+  <button class="music-btn" onclick="toggleMusic()">Play Music 🎧</button>
+
+  <!-- YouTube Music -->
+  <iframe id="music" width="0" height="0" src="" frameborder="0" allow="autoplay"></iframe>
+
+  <script>
+    let playing = false;
+
+    function startExperience() {
+      document.querySelector('.start-btn').style.display = 'none';
+      document.querySelector('.music-btn').style.display = 'block';
+
+      for (let i = 0; i < 30; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'floating-heart';
+        heart.innerHTML = '💙';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+        heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+        document.body.appendChild(heart);
+      }
+    }
+
+    function toggleMusic() {
+      const iframe = document.getElementById('music');
+
+      if (!playing) {
+        // start at 30 seconds (you can change this number)
+        iframe.src = "https://www.youtube.com/embed/BI4sC5hidUg?autoplay=1&loop=1&playlist=BI4sC5hidUg&start=30";
+        document.querySelector('.music-btn').innerText = 'Pause Music ⏸️';
+        playing = true;
+      } else {
+        iframe.src = "";
+        document.querySelector('.music-btn').innerText = 'Play Music 🎧';
+        playing = false;
+      }
+    }
+
+    function burstHearts() {
+      for (let i = 0; i < 10; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'floating-heart';
+        heart.innerHTML = '💙';
+        heart.style.left = '50vw';
+        heart.style.fontSize = (Math.random() * 25 + 15) + 'px';
+        heart.style.animationDuration = '3s';
+        document.body.appendChild(heart);
+      }
+    }
+  </script>
+
+  <div class="letter">
+    <h1>Happy 18th Birthday My Honey Pie, Nanda 💙</h1>
+
+    <p>
+Time flies so fast, huh? It’s the 2nd time I get to celebrate your birthday. So You’re now officially mature, and You know that life will get harder as soon as You become mature. But, that’s not a big thing to worry about, because You’ve got me, The one who stays through the thick and thin. Okay, that’s just me being narcissistic. I believe that You’ll get things done easily even by yourself, because You’re a strong woman. Me? I’m just a support system of yours.
+
+It’s been 2 Years, and I’ve never once gotten bored of You. Your kindness and your personality and eee honestly everything about You!  That’s what made me fall even harder than ever.
+
+I love the time we’ve spent together. Every moment feels unreal and special. I’ve never felt this kind of joy before. My favorite moment is when I just understood why You stay silent around me. At first, I thought You hated me but eventually It’s just the way You feel safe around me. GOSH, My jealousy was overflowing You know because You talk normally with other people but ME!?!? But as soon as I realized, It made me feel over the moon. There’s so much I could say about You, but I don’t wanna bore you with it. Simply, You just knock me off my feet.
+
+I hope this year will be better than last year, I wish You good health and happiness. AND THE MOST IMPORTANT THING IS OUR SNBP SCREEN IS BLUE, Aamiin.
+
+And thanks for sticking with me despite my personality. Sometimes I’m being clumsy and socially awkward, but You’re never mad at me😊
+    </p>
+
+    <div class="heart" onclick="burstHearts()">💙</div>
+
+    <p class="signature">From, Ezzar</p>
+
+    <p class="ps">P.S Love you forever and forever 💙</p>
+  </div>
+
+</body>
+</html>
